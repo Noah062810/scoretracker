@@ -1,10 +1,12 @@
 input.onButtonPressed(Button.A, function () {
+    basic.showString("1")
     Player1 += 1
     Rounds += 1
     OLED.init(128, 64)
     updatescores()
 })
 input.onButtonPressed(Button.AB, function () {
+    basic.showString("T")
     Ties += 1
     Rounds += 1
     OLED.init(128, 64)
@@ -21,12 +23,14 @@ function updatescores () {
     OLED.writeStringNewLine("Rounds: " + Rounds)
 }
 input.onButtonPressed(Button.B, function () {
+    basic.showString("2")
     Player2 += 1
     Rounds += 1
     OLED.init(128, 64)
     updatescores()
 })
 input.onGesture(Gesture.Shake, function () {
+    basic.clearScreen()
     reset()
 })
 function reset () {
